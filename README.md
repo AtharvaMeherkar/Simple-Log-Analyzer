@@ -45,7 +45,7 @@ VS Code (Recommended): For a smooth development experience.
 2. Download the Project
 Open your terminal or Git Bash.
 Clone the repository:
-git clone https://github.com/Atharva_Meherkar/Simple-Log-Analyzer.git
+git clone https://github.com/AtharvaMeherkar/Simple-Log-Analyzer.git
 Navigate into the project directory:
 cd Simple-Log-Analyzer
 
