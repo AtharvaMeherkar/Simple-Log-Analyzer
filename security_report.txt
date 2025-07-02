@@ -1,0 +1,37 @@
+--- Log Analysis Report ---
+Analysis started: 2025-07-01 16:59:15
+
+Analyzing file: access.log
+
+[ALERT] Failed login from 192.168.1.10 for '/login' (Status: 401) - Line 4
+[ALERT] Failed login from 192.168.1.10 for '/login' (Status: 401) - Line 6
+[ALERT] Failed login from 192.168.1.10 for '/login' (Status: 401) - Line 8
+[WARNING] Forbidden access attempt to restricted area from 192.168.1.15 on '/admin/backup.zip'
+[INFO] Unusual HTTP Status Code: 404 for '/execute_command' from 192.168.1.17 - Line 11
+[WARNING] Forbidden access attempt to restricted area from 192.168.1.18 on '/private/data.json'
+[INFO] Unusual HTTP Status Code: 500 for '/api/v1/users' from 192.168.1.20 - Line 14
+[INFO] Unusual HTTP Status Code: 404 for '/nonexistent.php' from 192.168.1.21 - Line 15
+[WARNING] Forbidden access attempt to restricted area from 192.168.1.22 on '/admin/settings'
+[WARNING] Possible Malicious URL pattern detected from 192.168.1.23 on '/vulnerable_endpoint?param=sleep(5)'
+[WARNING] Forbidden access attempt to restricted area from 192.168.1.24 on '/config/db.php'
+
+--- Analysis Summary (19 lines processed) ---
+
+Summary of Failed Login Attempts (IP: Count):
+  [CRITICAL] 192.168.1.10: 3 (Multiple failed attempts - potential brute-force!)
+
+Summary of Suspicious URL Access Attempts:
+  IP: 192.168.1.23, URL: '/vulnerable_endpoint?param=sleep(5)', Status: 200 - Line 17
+
+Summary of Forbidden Access Attempts (403 Status):
+  IP: 192.168.1.15, URL: '/admin/backup.zip', Status: 403 - Line 9
+  IP: 192.168.1.18, URL: '/private/data.json', Status: 403 - Line 12
+  IP: 192.168.1.22, URL: '/admin/settings', Status: 403 - Line 16
+  IP: 192.168.1.24, URL: '/config/db.php', Status: 403 - Line 18
+
+Summary of Other Unusual HTTP Status Codes (4xx/5xx):
+  IP: 192.168.1.17, URL: '/execute_command', Status: 404 - Line 11
+  IP: 192.168.1.20, URL: '/api/v1/users', Status: 500 - Line 14
+  IP: 192.168.1.21, URL: '/nonexistent.php', Status: 404 - Line 15
+
+Analysis complete. Detailed report saved to 'security_report.txt'

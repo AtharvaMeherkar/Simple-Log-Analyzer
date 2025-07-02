@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.egg-info/
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints
+.vscode/ # VS Code specific settings, optional to ignore
+
+# Specific to this project
+access.log # Don't upload actual log files
+security_report.txt # Don't upload generated reports

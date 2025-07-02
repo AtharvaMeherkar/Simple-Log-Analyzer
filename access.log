@@ -1,0 +1,19 @@
+192.168.1.10 - - [01/Jul/2025:10:00:01 +0530] "GET /index.html HTTP/1.1" 200 1234
+192.168.1.11 - - [01/Jul/2025:10:00:05 +0530] "POST /login HTTP/1.1" 200 45 "user=atharva&pass=correct"
+192.168.1.12 - - [01/Jul/2025:10:00:10 +0530] "GET /assets/style.css HTTP/1.1" 200 567
+192.168.1.10 - - [01/Jul/2025:10:00:15 +0530] "POST /login HTTP/1.1" 401 25 "user=admin&pass=wrongpass1"
+192.168.1.13 - - [01/Jul/2025:10:00:20 +0530] "GET /images/logo.png HTTP/1.1" 200 890
+192.168.1.10 - - [01/Jul/2025:10:00:22 +0530] "POST /login HTTP/1.1" 401 25 "user=admin&pass=wrongpass2"
+192.168.1.14 - - [01/Jul/2025:10:00:25 +0530] "GET /about.html HTTP/1.1" 200 300
+192.168.1.10 - - [01/Jul/2025:10:00:28 +0530] "POST /login HTTP/1.1" 401 25 "user=admin&pass=wrongpass3"
+192.168.1.15 - - [01/Jul/2025:10:00:30 +0530] "GET /admin/backup.zip HTTP/1.1" 403 100
+192.168.1.16 - - [01/Jul/2025:10:00:35 +0530] "GET /index.php?id=1%20OR%201=1-- HTTP/1.1" 200 500
+192.168.1.17 - - [01/Jul/2025:10:00:40 +0530] "POST /execute_command HTTP/1.1" 404 150
+192.168.1.18 - - [01/Jul/2025:10:00:45 +0530] "GET /private/data.json HTTP/1.1" 403 200
+192.168.1.19 - - [01/Jul/2025:10:00:50 +0530] "GET /search?q=%3Cscript%3Ealert('XSS')%3C/script%3E HTTP/1.1" 200 600
+192.168.1.20 - - [01/Jul/2025:10:00:55 +0530] "GET /api/v1/users HTTP/1.1" 500 70
+192.168.1.21 - - [01/Jul/2025:10:01:00 +0530] "GET /nonexistent.php HTTP/1.1" 404 100
+192.168.1.22 - - [01/Jul/2025:10:01:05 +0530] "GET /admin/settings HTTP/1.1" 403 120
+192.168.1.23 - - [01/Jul/2025:10:01:10 +0530] "GET /vulnerable_endpoint?param=sleep(5) HTTP/1.1" 200 300
+192.168.1.24 - - [01/Jul/2025:10:01:15 +0530] "GET /config/db.php HTTP/1.1" 403 50
+192.168.1.25 - - [01/Jul/2025:10:01:20 +0530] "GET /robots.txt HTTP/1.1" 200 100
